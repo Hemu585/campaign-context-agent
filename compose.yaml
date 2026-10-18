@@ -1,0 +1,30 @@
+# Local FalkorDB for the Campaign Context Agent: loopback-only ports and a
+# persistent named volume with AOF (LOCAL_SETUP section 2). The backend, frontend
+# and Ollama run on the host. Never use `docker compose down -v` on this file:
+# the volume holds the operator's sessions, decisions and approvals.
+name: campaign_context
+
+services:
+  falkordb:
+    image: ${FALKORDB_IMAGE:-falkordb/falkordb:v4.22.1@sha256:b0bdcac2cbaff989e77cb0610439b7a9289e86de033ccbbd4368b66fb680ae7a}
+    ports:
+      - "127.0.0.1:6379:6379"
+      - "127.0.0.1:3001:3000"
+    environment:
+      # The image's run.sh appends `--dir ${FALKORDB_DATA_PATH}` after REDIS_ARGS,
+      # so a `--dir` in REDIS_ARGS is silently overridden (observed on v4.22.1).
+      # Point the image's own variable at the mounted volume instead.
+      FALKORDB_DATA_PATH: /data
+      REDIS_ARGS: "--appendonly yes --appendfsync everysec"
+    volumes:
+      - campaign_context_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  campaign_context_data:
+    name: campaign_context_data

@@ -1,0 +1,27 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / frontend build output
+node_modules/
+frontend/dist/
+frontend/dist-e2e/
+frontend/playwright-report/
+frontend/test-results/
+frontend/blob-report/
+
+# Local environment and logs (never commit secrets or machine state)
+.env
+*.log
+.local/
+
+# OS noise
+.DS_Store
+Thumbs.db
+# verify-model reports stay local
+docs/verification/

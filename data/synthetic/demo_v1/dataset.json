@@ -1,0 +1,109 @@
+{
+  "dataset_version": "demo_v1",
+  "schema_version": 1,
+  "notice": "FICTIONAL DEMO DATA. Every name, brand, rate, window and agreement here is invented for the Campaign Context Agent demo.",
+  "workspace": {"id": "ws_demo", "name": "Fictional agency workspace"},
+  "default_observed_at": "2026-10-15T12:00:00Z",
+
+  "brands": [
+    {"id": "brand_01", "name": "Luma Skin", "category": "beauty"},
+    {"id": "brand_02", "name": "Noro Glow", "category": "beauty"},
+    {"id": "brand_03", "name": "Alto Fitness", "category": "fitness"},
+    {"id": "brand_04", "name": "Pavo Home", "category": "home"},
+    {"id": "brand_05", "name": "Kivo Tech", "category": "technology"}
+  ],
+
+  "competitor_edges": [
+    {"a": "brand_01", "b": "brand_02", "source_doc": "competitors_brand01"}
+  ],
+
+  "campaigns": [
+    {"id": "camp_01", "brand_id": "brand_01", "title": "Luma Autumn Launch", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "beauty", "currency": "INR", "budget_paise": 2500000, "start": "2026-10-20T09:00:00+05:30", "end": "2026-10-23T18:00:00+05:30", "status": "open", "source_doc": "camp01_brief"},
+    {"id": "camp_02", "brand_id": "brand_01", "title": "Luma Winter Glow Preview", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "beauty", "currency": "INR", "budget_paise": 2500000, "start": "2026-10-20T09:00:00+05:30", "end": "2026-10-23T18:00:00+05:30", "status": "open", "source_doc": "camp02_brief"},
+    {"id": "camp_03", "brand_id": "brand_04", "title": "Pavo Home Festive Self-Care Corner", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "beauty", "currency": "INR", "budget_paise": 2500000, "start": "2026-10-20T09:00:00+05:30", "end": "2026-10-23T18:00:00+05:30", "status": "open", "source_doc": "camp03_brief"},
+    {"id": "camp_04", "brand_id": "brand_01", "title": "Luma Monsoon Care", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "beauty", "currency": "INR", "budget_paise": 2000000, "start": "2026-07-06T09:00:00+05:30", "end": "2026-07-09T18:00:00+05:30", "status": "completed", "source_doc": "camp04_record", "source_observed_at": "2026-07-10T12:00:00+05:30"},
+    {"id": "camp_05", "brand_id": "brand_03", "title": "Alto Fitness Stretch Week", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "fitness", "currency": "INR", "budget_paise": 1800000, "start": "2026-07-20T09:00:00+05:30", "end": "2026-07-23T18:00:00+05:30", "status": "completed", "source_doc": "camp05_record", "source_observed_at": "2026-07-24T12:00:00+05:30"},
+    {"id": "camp_06", "brand_id": "brand_02", "title": "Noro Glow Summer Serum", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "beauty", "currency": "INR", "budget_paise": 2200000, "start": "2026-08-10T09:00:00+05:30", "end": "2026-08-13T18:00:00+05:30", "status": "completed", "source_doc": "camp06_record", "source_observed_at": "2026-08-14T12:00:00+05:30"},
+    {"id": "camp_07", "brand_id": "brand_04", "title": "Pavo Home Kitchen Refresh", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "home", "currency": "INR", "budget_paise": 1600000, "start": "2026-08-24T09:00:00+05:30", "end": "2026-08-27T18:00:00+05:30", "status": "completed", "source_doc": "camp07_record", "source_observed_at": "2026-08-28T12:00:00+05:30"},
+    {"id": "camp_08", "brand_id": "brand_05", "title": "Kivo Tech Gadget Drop", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "technology", "currency": "INR", "budget_paise": 3000000, "start": "2026-09-07T09:00:00+05:30", "end": "2026-09-10T18:00:00+05:30", "status": "completed", "source_doc": "camp08_record", "source_observed_at": "2026-09-11T12:00:00+05:30"}
+  ],
+
+  "creators": [
+    {"id": "cr_01", "name": "Asha Pine", "active": true},
+    {"id": "cr_02", "name": "Mira Vale", "active": true},
+    {"id": "cr_03", "name": "Tara Reed", "active": true},
+    {"id": "cr_04", "name": "Noor Finch", "active": true},
+    {"id": "cr_05", "name": "Elia Stone", "active": true},
+    {"id": "cr_06", "name": "Kavya Moss", "active": true},
+    {"id": "cr_07", "name": "Lena Brook", "active": true},
+    {"id": "cr_08", "name": "Sia North", "active": true},
+    {"id": "cr_09", "name": "Ada Bloom", "active": true},
+    {"id": "cr_10", "name": "Rhea Lake", "active": true},
+    {"id": "cr_11", "name": "Dia Fern", "active": true},
+    {"id": "cr_12", "name": "Nia Cove", "active": true}
+  ],
+
+  "participation": [
+    {"creator_id": "cr_01", "campaign_id": "camp_01", "status": "dropped_out", "source_doc": "camp01_brief"},
+    {"creator_id": "cr_01", "campaign_id": "camp_02", "status": "dropped_out", "source_doc": "camp02_brief"},
+    {"creator_id": "cr_01", "campaign_id": "camp_03", "status": "dropped_out", "source_doc": "camp03_brief"},
+    {"creator_id": "cr_01", "campaign_id": "camp_04", "status": "completed", "source_doc": "camp04_record"},
+    {"creator_id": "cr_02", "campaign_id": "camp_04", "status": "completed", "source_doc": "camp04_record"},
+    {"creator_id": "cr_02", "campaign_id": "camp_05", "status": "completed", "source_doc": "camp05_record"},
+    {"creator_id": "cr_03", "campaign_id": "camp_06", "status": "completed", "source_doc": "camp06_record"},
+    {"creator_id": "cr_04", "campaign_id": "camp_07", "status": "completed", "source_doc": "camp07_record"}
+  ],
+
+  "offers": [
+    {"id": "off_cr01", "creator_id": "cr_01", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "beauty", "fee_paise": 1700000, "currency": "INR", "valid_from": "2026-10-01T00:00:00+05:30", "valid_to": "2026-10-31T23:59:59+05:30", "source_doc": "offer_cr01"},
+    {"id": "off_cr02", "creator_id": "cr_02", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "beauty", "fee_paise": 1800000, "currency": "INR", "valid_from": "2026-10-01T00:00:00+05:30", "valid_to": "2026-10-31T23:59:59+05:30", "source_doc": "offer_cr02"},
+    {"id": "off_cr03", "creator_id": "cr_03", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "beauty", "fee_paise": 1500000, "currency": "INR", "valid_from": "2026-10-01T00:00:00+05:30", "valid_to": "2026-10-31T23:59:59+05:30", "source_doc": "offer_cr03"},
+    {"id": "off_cr04", "creator_id": "cr_04", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "beauty", "fee_paise": 2100000, "currency": "INR", "valid_from": "2026-10-01T00:00:00+05:30", "valid_to": "2026-10-31T23:59:59+05:30", "source_doc": "offer_cr04"},
+    {"id": "off_cr05", "creator_id": "cr_05", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "beauty", "fee_paise": 2700000, "currency": "INR", "valid_from": "2026-10-01T00:00:00+05:30", "valid_to": "2026-10-31T23:59:59+05:30", "source_doc": "offer_cr05"},
+    {"id": "off_cr06", "creator_id": "cr_06", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "beauty", "fee_paise": 1900000, "currency": "INR", "valid_from": "2026-10-01T00:00:00+05:30", "valid_to": "2026-10-31T23:59:59+05:30", "source_doc": "offer_cr06"},
+    {"id": "off_cr07", "creator_id": "cr_07", "channel": "instagram", "deliverable": "instagram_reel", "language": "en", "category": "beauty", "fee_paise": 1600000, "currency": "INR", "valid_from": "2026-10-01T00:00:00+05:30", "valid_to": "2026-10-31T23:59:59+05:30", "source_doc": "offer_cr07"},
+    {"id": "off_cr08", "creator_id": "cr_08", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "beauty", "fee_paise": 1700000, "currency": "INR", "valid_from": "2026-10-01T00:00:00+05:30", "valid_to": "2026-10-31T23:59:59+05:30", "source_doc": "offer_cr08"},
+    {"id": "off_cr09", "creator_id": "cr_09", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "beauty", "fee_paise": 2300000, "currency": "INR", "valid_from": "2026-10-01T00:00:00+05:30", "valid_to": "2026-10-31T23:59:59+05:30", "source_doc": "offer_cr09"},
+    {"id": "off_cr10", "creator_id": "cr_10", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "beauty", "fee_paise": 2400000, "currency": "INR", "valid_from": "2026-10-01T00:00:00+05:30", "valid_to": "2026-10-31T23:59:59+05:30", "source_doc": "offer_cr10"},
+    {"id": "off_cr11", "creator_id": "cr_11", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "beauty", "fee_paise": 1750000, "currency": "INR", "valid_from": "2026-10-01T00:00:00+05:30", "valid_to": "2026-10-31T23:59:59+05:30", "source_doc": "offer_cr11"},
+    {"id": "off_cr12", "creator_id": "cr_12", "channel": "instagram", "deliverable": "instagram_reel", "language": "hi", "category": "beauty", "fee_paise": 2500000, "currency": "INR", "valid_from": "2026-10-01T00:00:00+05:30", "valid_to": "2026-10-31T23:59:59+05:30", "source_doc": "offer_cr12"}
+  ],
+
+  "availability": [
+    {"id": "avail_cr01", "creator_id": "cr_01", "start": "2026-10-20T00:00:00+05:30", "end": "2026-10-24T23:59:59+05:30", "status": "available", "source_doc": "avail_cr01"},
+    {"id": "avail_cr02", "creator_id": "cr_02", "start": "2026-10-20T00:00:00+05:30", "end": "2026-10-24T23:59:59+05:30", "status": "available", "source_doc": "avail_cr02"},
+    {"id": "avail_cr03", "creator_id": "cr_03", "start": "2026-10-20T00:00:00+05:30", "end": "2026-10-24T23:59:59+05:30", "status": "available", "source_doc": "avail_cr03"},
+    {"id": "avail_cr04", "creator_id": "cr_04", "start": "2026-10-20T00:00:00+05:30", "end": "2026-10-24T23:59:59+05:30", "status": "available", "source_doc": "avail_cr04"},
+    {"id": "avail_cr05", "creator_id": "cr_05", "start": "2026-10-20T00:00:00+05:30", "end": "2026-10-24T23:59:59+05:30", "status": "available", "source_doc": "avail_cr05"},
+    {"id": "avail_cr06", "creator_id": "cr_06", "start": "2026-10-20T00:00:00+05:30", "end": "2026-10-24T23:59:59+05:30", "status": "available", "source_doc": "avail_cr06"},
+    {"id": "unavail_cr06", "creator_id": "cr_06", "start": "2026-10-21T00:00:00+05:30", "end": "2026-10-22T23:59:59+05:30", "status": "unavailable", "source_doc": "unavail_cr06"},
+    {"id": "avail_cr07", "creator_id": "cr_07", "start": "2026-10-20T00:00:00+05:30", "end": "2026-10-24T23:59:59+05:30", "status": "available", "source_doc": "avail_cr07"},
+    {"id": "avail_cr08", "creator_id": "cr_08", "start": "2026-10-20T00:00:00+05:30", "end": "2026-10-24T23:59:59+05:30", "status": "available", "source_doc": "avail_cr08"},
+    {"id": "avail_cr09", "creator_id": "cr_09", "start": "2026-10-20T00:00:00+05:30", "end": "2026-10-24T23:59:59+05:30", "status": "available", "source_doc": "avail_cr09"},
+    {"id": "avail_cr10", "creator_id": "cr_10", "start": "2026-10-20T00:00:00+05:30", "end": "2026-10-24T23:59:59+05:30", "status": "available", "source_doc": "avail_cr10"},
+    {"id": "avail_cr11", "creator_id": "cr_11", "start": "2026-10-20T00:00:00+05:30", "end": "2026-10-24T23:59:59+05:30", "status": "available", "source_doc": "avail_cr11", "source_observed_at": "2026-09-01T12:00:00+05:30"},
+    {"id": "avail_cr12", "creator_id": "cr_12", "start": "2026-10-20T00:00:00+05:30", "end": "2026-10-24T23:59:59+05:30", "status": "available", "source_doc": "avail_cr12"}
+  ],
+
+  "agreements": [
+    {"id": "agr_cr03", "creator_id": "cr_03", "counterparty_brand_id": "brand_02", "exclusive": true, "channel": "instagram", "category": "beauty", "start": "2026-10-01T00:00:00+05:30", "end": "2026-10-31T23:59:59+05:30", "status": "active", "source_doc": "agreement_cr03"},
+    {"id": "agr_cr09", "creator_id": "cr_09", "counterparty_brand_id": "brand_02", "exclusive": true, "channel": "instagram", "category": "beauty", "start": "2026-09-01T00:00:00+05:30", "end": "2026-09-30T23:59:59+05:30", "status": "active", "source_doc": "agreement_cr09"},
+    {"id": "agr_cr10", "creator_id": "cr_10", "counterparty_brand_id": "brand_03", "exclusive": true, "channel": "instagram", "category": "fitness", "start": "2026-10-01T00:00:00+05:30", "end": "2026-10-31T23:59:59+05:30", "status": "active", "source_doc": "agreement_cr10"}
+  ],
+
+  "audits": [
+    {"id": "audit_cr01", "kind": "agreements", "subject_id": "cr_01", "coverage_start": "2026-10-01T00:00:00+05:30", "coverage_end": "2026-11-30T23:59:59+05:30", "complete": true, "listed_ids": [], "source_doc": "audit_cr01"},
+    {"id": "audit_cr02", "kind": "agreements", "subject_id": "cr_02", "coverage_start": "2026-10-01T00:00:00+05:30", "coverage_end": "2026-11-30T23:59:59+05:30", "complete": true, "listed_ids": [], "source_doc": "audit_cr02"},
+    {"id": "audit_cr03", "kind": "agreements", "subject_id": "cr_03", "coverage_start": "2026-10-01T00:00:00+05:30", "coverage_end": "2026-11-30T23:59:59+05:30", "complete": true, "listed_ids": ["agr_cr03"], "source_doc": "audit_cr03"},
+    {"id": "audit_cr04", "kind": "agreements", "subject_id": "cr_04", "coverage_start": "2026-10-01T00:00:00+05:30", "coverage_end": "2026-11-30T23:59:59+05:30", "complete": true, "listed_ids": [], "source_doc": "audit_cr04"},
+    {"id": "audit_cr05", "kind": "agreements", "subject_id": "cr_05", "coverage_start": "2026-10-01T00:00:00+05:30", "coverage_end": "2026-11-30T23:59:59+05:30", "complete": true, "listed_ids": [], "source_doc": "audit_cr05"},
+    {"id": "audit_cr06", "kind": "agreements", "subject_id": "cr_06", "coverage_start": "2026-10-01T00:00:00+05:30", "coverage_end": "2026-11-30T23:59:59+05:30", "complete": true, "listed_ids": [], "source_doc": "audit_cr06"},
+    {"id": "audit_cr07", "kind": "agreements", "subject_id": "cr_07", "coverage_start": "2026-10-01T00:00:00+05:30", "coverage_end": "2026-11-30T23:59:59+05:30", "complete": true, "listed_ids": [], "source_doc": "audit_cr07"},
+    {"id": "audit_cr09", "kind": "agreements", "subject_id": "cr_09", "coverage_start": "2026-10-01T00:00:00+05:30", "coverage_end": "2026-11-30T23:59:59+05:30", "complete": true, "listed_ids": ["agr_cr09"], "source_doc": "audit_cr09"},
+    {"id": "audit_cr10", "kind": "agreements", "subject_id": "cr_10", "coverage_start": "2026-10-01T00:00:00+05:30", "coverage_end": "2026-11-30T23:59:59+05:30", "complete": true, "listed_ids": ["agr_cr10"], "source_doc": "audit_cr10"},
+    {"id": "audit_cr11", "kind": "agreements", "subject_id": "cr_11", "coverage_start": "2026-10-01T00:00:00+05:30", "coverage_end": "2026-11-30T23:59:59+05:30", "complete": true, "listed_ids": [], "source_doc": "audit_cr11"},
+    {"id": "audit_cr12", "kind": "agreements", "subject_id": "cr_12", "coverage_start": "2026-10-01T00:00:00+05:30", "coverage_end": "2026-11-30T23:59:59+05:30", "complete": true, "listed_ids": [], "source_doc": "audit_cr12"},
+    {"id": "audit_competitors_brand01", "kind": "competitors", "subject_id": "brand_01", "coverage_start": "2026-10-01T00:00:00+05:30", "coverage_end": "2026-11-30T23:59:59+05:30", "complete": true, "listed_ids": ["brand_02"], "source_doc": "competitors_brand01"},
+    {"id": "audit_competitors_brand04", "kind": "competitors", "subject_id": "brand_04", "coverage_start": "2026-10-01T00:00:00+05:30", "coverage_end": "2026-11-30T23:59:59+05:30", "complete": true, "listed_ids": [], "source_doc": "competitors_brand04"}
+  ]
+}

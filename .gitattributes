@@ -1,0 +1,4 @@
+# Keep LF in the repository and working tree so scripts behave the same on every OS.
+* text=auto eol=lf
+*.png binary
+*.webp binary

@@ -1,0 +1,24 @@
+# Disposable FalkorDB used only by the restart / container-recreation test (T14).
+# Separate project, port and volume, so tests never touch the demo data.
+name: campaign_context_test
+
+services:
+  falkordb-test:
+    image: ${FALKORDB_IMAGE:-falkordb/falkordb:v4.22.1@sha256:b0bdcac2cbaff989e77cb0610439b7a9289e86de033ccbbd4368b66fb680ae7a}
+    ports:
+      - "127.0.0.1:6380:6379"
+    environment:
+      FALKORDB_DATA_PATH: /data   # see compose.yaml: run.sh overrides --dir from REDIS_ARGS
+      REDIS_ARGS: "--appendonly yes --appendfsync everysec"
+      BROWSER: "0"
+    volumes:
+      - campaign_context_test_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  campaign_context_test_data:
+    name: campaign_context_test_data

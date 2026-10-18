@@ -1,0 +1,32 @@
+// Friendly aliases over the generated OpenAPI types (src/api/schema.d.ts, from frontend/openapi.json).
+import type { components } from './schema'
+
+type S = components['schemas']
+
+export type Bootstrap = S['Bootstrap']
+export type Health = S['Health']
+export type CampaignSummary = S['CampaignSummary']
+export type CampaignDetail = S['CampaignDetail']
+export type Evaluation = S['Evaluation']
+export type CandidateEvaluation = S['CandidateEvaluation']
+export type Check = S['Check']
+export type EvidencePath = S['EvidencePath']
+export type SourceMeta = S['SourceMeta']
+export type SessionSummary = S['SessionSummary']
+export type SessionDetail = S['SessionDetail']
+export type Message = S['Message']
+export type Run = S['Run']
+export type TraceEvent = S['TraceEvent']
+export type FinalResult = S['FinalResult']
+export type Proposal = S['Proposal']
+export type ApprovalResult = S['ApprovalResult']
+export type Decision = S['Decision']
+export type SourceDoc = S['SourceDoc']
+export type EditableFacts = S['EditableFacts']
+export type EditableAgreement = S['EditableAgreement']
+export type EditableAvailability = S['EditableAvailability']
+export type EditResult = S['EditResult']
+export type ErrorEnvelope = S['ErrorEnvelope']
+
+export type CandidateStatus = CandidateEvaluation['status']
+export type RunStatus = Run['status']
